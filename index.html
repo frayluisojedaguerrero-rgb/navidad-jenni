@@ -1,168 +1,206 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Navidad Mi Amor</title>
-
-<!-- Fuentes elegantes -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Feliz Navidad Jenni ❤️</title>
 
 <style>
-body {
-  margin: 0;
-  background: linear-gradient(180deg, #0b3d2e, #145a32);
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Georgia',serif}
+
+body{
+min-height:100vh;
+background:linear-gradient(#0b6623,#145a32);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+overflow-x:hidden;
 }
 
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
+/* LUCES */
+.lights{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-around;
+font-size:1.8rem;
+animation:blink 1.5s infinite alternate;
+z-index:3;
+}
+@keyframes blink{
+from{opacity:.6}
+to{opacity:1}
 }
 
-.card {
-  background: #f4fdf8;
-  max-width: 900px;
-  width: 100%;
-  padding: 30px 28px;
-  border-radius: 22px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+/* TARJETA */
+.card{
+background:linear-gradient(#1e8449,#145a32);
+max-width:900px;
+width:100%;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 35px rgba(0,0,0,.5);
+color:#fff;
+animation:entrada 1.5s ease;
+position:relative;
+z-index:2;
+}
+@keyframes entrada{
+from{opacity:0;transform:scale(.9)}
+to{opacity:1;transform:scale(1)}
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  color: #145a32;
-  margin-bottom: 20px;
-  font-size: 30px;
+h1{text-align:center;color:#ffebcd;margin-bottom:15px}
+
+.photo{
+width:100%;
+max-width:320px;
+display:block;
+margin:0 auto 20px;
+border-radius:20px;
+border:5px solid #f9e79f;
 }
 
-.photo {
-  width: 240px;
-  display: block;
-  margin: 0 auto 22px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+.message{
+font-size:1.05rem;
+line-height:1.8;
+text-align:justify;
+white-space:pre-line;
 }
 
-.message {
-  font-size: 17px;
-  color: #2c3e50;
-  line-height: 1.9;
-  text-align: justify;
+audio{width:100%;margin-top:25px}
+
+/* BOTÓN */
+button{
+display:block;
+margin:25px auto;
+padding:12px 20px;
+border:none;
+border-radius:20px;
+background:#f9e79f;
+font-size:1rem;
+cursor:pointer;
+}
+button:hover{background:#fdebd0}
+
+/* FRASE FINAL */
+#typing{
+text-align:center;
+margin-top:20px;
+font-size:1.2rem;
+font-weight:bold;
+color:#fff8dc;
 }
 
-.message p {
-  margin-bottom: 18px;
+/* NIEVE */
+.snowflake,.decor,.heart{
+position:fixed;
+top:-10px;
+z-index:1;
+animation:fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh)}
 }
 
-/* Nieve */
-.snow {
-  position: fixed;
-  top: -10px;
-  color: white;
-  font-size: 18px;
-  animation: fall linear infinite;
-  opacity: 0.8;
-  pointer-events: none;
-}
+.heart{color:#ff6b81;font-size:1.2rem}
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
-}
-
-/* Adornos */
-.decor {
-  position: fixed;
-  font-size: 22px;
-  animation: fallDecor linear infinite;
-  opacity: 0.9;
-  pointer-events: none;
-}
-
-@keyframes fallDecor {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
+/* ÁRBOLES */
+.trees{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+font-size:2.5rem;
+z-index:0;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Música instrumental navideña -->
-<audio autoplay loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/11/21/audio_8d2a67f47d.mp3" type="audio/mpeg">
-</audio>
+<div class="lights">🎄✨🎄✨🎄✨🎄✨🎄</div>
 
-<div class="container">
-  <div class="card">
-    <h1>🎄 Feliz Navidad, mi amor 🎄</h1>
+<div class="card">
+<h1>🎄 Feliz Navidad, mi amor ❤️</h1>
 
-    <img src="jenni.jpeg" alt="Jenni" class="photo">
+<img src="jenni.jpeg" class="photo">
 
-    <div class="message">
-      <p><strong>Mi amorcito,</strong></p>
+<div class="message">
+Mi amorcito,
 
-      <p>
-      en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón. Hoy la distancia
-      me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día, mi rutina favorita,
-      mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento y en cada latido.
-      </p>
+en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón. Hoy la distancia me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día, mi rutina favorita, mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento y en cada latido.
 
-      <p>
-      Esta Navidad quiero decirte lo mucho que te amo y lo agradecido que estoy con la vida y con Dios por tenerte a mi lado.
-      Nuestro amor se ha convertido en un refugio, en un espacio de paz donde ambos podemos ser nosotros mismos.
-      </p>
+Esta Navidad quiero decirte lo mucho que te amo, lo agradecido que estoy con la vida y con Dios por tenerte a mi lado. Nuestro amor se ha convertido en un refugio, en un espacio de paz donde ambos podemos ser nosotros mismos. Deseo con todo mi corazón que el amor y la paz sigan siendo el pilar fundamental de nuestra relación en este nuevo año que está por venir.
 
-      <p>
-      Le pido al Niño Dios que nos permita seguir disfrutando de este amor tan bonito que hemos construido, que cuide
-      nuestro hogar y que nos mantenga unidos en los momentos buenos y en los difíciles, siempre tomados de la mano.
-      </p>
+Le pido al Niño Dios que nos permita seguir disfrutando de este amor tan bonito que hemos construido, que cuide nuestro hogar y que nos mantenga unidos en los momentos buenos y en los difíciles. Que nunca falte el respeto, la comprensión y las ganas de seguir luchando juntos, tomados de la mano.
 
-      <p>
-      Gracias por ser mi soporte, mi alegría en los días grises y la persona que siempre está ahí para levantarme.
-      Eres una mujer maravillosa, fuerte y valiente, y me siento profundamente orgulloso de ti.
-      </p>
+Gracias por ser mi soporte, mi alegría en los días grises y la persona que siempre está ahí para levantarme. Eres una chica maravillosa, fuerte y valiente, y me siento profundamente orgulloso de la mujer y la gran profesional en la que te estás convirtiendo.
 
-      <p>
-      <strong>Feliz Navidad, mi niña hermosa.</strong><br>
-      Gracias por ser mi mayor regalo, mi paz y mi amor.<br>
-      Te amo con todo mi corazón, hoy y siempre 🎄❤️✨
-      </p>
-    </div>
-  </div>
+Aunque hoy nos separen algunos kilómetros, mi corazón está contigo. Sueño con el día en que volvamos a estar juntos, construyendo nuestra vida, nuestro hogar y nuestros sueños.
+
+Feliz Navidad, mi niña hermosa.  
+Gracias por ser mi mayor regalo.  
+Te amo hoy y siempre 🎄❤️✨
 </div>
 
+<button onclick="alert('Gracias por existir, eres mi hogar ❤️')">
+Tócalo, amorcito 💝
+</button>
+
+<div id="typing"></div>
+
+<audio controls loop>
+<source src="https://cdn.pixabay.com/audio/2022/12/01/audio_4b2f5a3a7f.mp3">
+</audio>
+</div>
+
+<div class="trees">🌲🎄🌲🎄🌲</div>
+
 <script>
-// Nieve
-for (let i = 0; i < 35; i++) {
-  let snow = document.createElement("div");
-  snow.className = "snow";
-  snow.innerHTML = "❄️";
-  snow.style.left = Math.random() * 100 + "vw";
-  snow.style.animationDuration = (6 + Math.random() * 6) + "s";
-  snow.style.fontSize = (12 + Math.random() * 18) + "px";
-  document.body.appendChild(snow);
+// NIEVE
+for(let i=0;i<40;i++){
+let s=document.createElement("div");
+s.className="snowflake";
+s.innerHTML="❄️";
+s.style.left=Math.random()*100+"vw";
+s.style.animationDuration=4+Math.random()*6+"s";
+document.body.appendChild(s);
 }
 
-// Adornos
-const icons = ["🎄","🎁","⛄","🍪","🔔"];
-for (let i = 0; i < 20; i++) {
-  let decor = document.createElement("div");
-  decor.className = "decor";
-  decor.innerHTML = icons[Math.floor(Math.random() * icons.length)];
-  decor.style.left = Math.random() * 100 + "vw";
-  decor.style.animationDuration = (7 + Math.random() * 6) + "s";
-  decor.style.fontSize = (18 + Math.random() * 18) + "px";
-  document.body.appendChild(decor);
+// ADORNOS
+const icons=["🎅","⛄","🎁","🍪","🔔"];
+for(let i=0;i<25;i++){
+let d=document.createElement("div");
+d.className="decor";
+d.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+d.style.left=Math.random()*100+"vw";
+d.style.animationDuration=5+Math.random()*6+"s";
+document.body.appendChild(d);
 }
+
+// CORAZONES
+for(let i=0;i<15;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=6+Math.random()*6+"s";
+document.body.appendChild(h);
+}
+
+// TEXTO ESCRITO
+const text="Te amo hoy, mañana y siempre ❤️";
+let i=0;
+setInterval(()=>{
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+}
+},120);
 </script>
 
 </body>
