@@ -6,15 +6,12 @@
 <title>Feliz Navidad, mi amor ❤️</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: auto;
   overflow-x: hidden;
 }
 
@@ -57,7 +54,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  width: 100%;
 }
 
 /* ARBOLES */
@@ -75,10 +71,8 @@ body {
   box-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
 
-/* TEXTO */
 h1 {
   color: #ffd700;
-  margin-top: 0;
 }
 
 p {
@@ -93,43 +87,41 @@ img {
   width: 100%;
   max-width: 320px;
   border-radius: 20px;
-  margin: 15px auto 25px auto;
+  margin: 15px auto 25px;
   display: block;
   box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
-/* FOOTER */
 footer {
   margin-top: 25px;
   font-style: italic;
   color: #ffd700;
 }
 
-/* NIEVE */
-.snowflake {
+/* ❄️ NIEVE + FIGURAS */
+.fall {
   position: fixed;
   top: -10px;
-  color: white;
-  font-size: 1.3em;
+  font-size: 1.5em;
   animation: fall linear infinite;
   z-index: 9999;
 }
-
-.snowflake:nth-child(1){left:10%; animation-duration:10s;}
-.snowflake:nth-child(2){left:30%; animation-duration:12s;}
-.snowflake:nth-child(3){left:50%; animation-duration:9s;}
-.snowflake:nth-child(4){left:70%; animation-duration:11s;}
-.snowflake:nth-child(5){left:90%; animation-duration:8s;}
 
 @keyframes fall {
   to { transform: translateY(120vh); opacity: 0; }
 }
 
+.f1 { left: 5%; animation-duration: 10s; }
+.f2 { left: 15%; animation-duration: 12s; }
+.f3 { left: 30%; animation-duration: 9s; }
+.f4 { left: 45%; animation-duration: 11s; }
+.f5 { left: 60%; animation-duration: 8s; }
+.f6 { left: 75%; animation-duration: 10s; }
+.f7 { left: 90%; animation-duration: 12s; }
+
 /* CELULAR */
 @media (max-width: 768px) {
-  .tree {
-    display: none;
-  }
+  .tree { display: none; }
 }
 </style>
 </head>
@@ -175,11 +167,14 @@ footer {
   <div class="tree">🎄</div>
 </div>
 
-<div class="snowflake">❄</div>
-<div class="snowflake">❅</div>
-<div class="snowflake">❆</div>
-<div class="snowflake">❄</div>
-<div class="snowflake">❅</div>
+<!-- FIGURAS NAVIDEÑAS -->
+<div class="fall f1">❄️</div>
+<div class="fall f2">☃️</div>
+<div class="fall f3">🍪</div>
+<div class="fall f4">🎁</div>
+<div class="fall f5">⭐</div>
+<div class="fall f6">🎄</div>
+<div class="fall f7">❄️</div>
 
 </body>
 </html>
