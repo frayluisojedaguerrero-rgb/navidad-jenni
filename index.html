@@ -31,11 +31,11 @@ body {
   padding: 30px 28px;
   border-radius: 22px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  text-align: center;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
-  text-align: center;
   color: #145a32;
   margin-bottom: 20px;
   font-size: 30px;
@@ -43,21 +43,38 @@ h1 {
 
 .photo {
   width: 240px;
-  display: block;
   margin: 0 auto 22px;
+  display: block;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
 .message {
-  font-size: 17px;
-  color: #2c3e50;
-  line-height: 1.9;
   text-align: justify;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #2c3e50;
+  margin-bottom: 25px;
 }
 
 .message p {
   margin-bottom: 18px;
+}
+
+button {
+  background: #145a32;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background: #0b3d2e;
 }
 
 /* Nieve */
@@ -65,38 +82,30 @@ h1 {
   position: fixed;
   top: -10px;
   color: white;
-  font-size: 18px;
   animation: fall linear infinite;
-  opacity: 0.8;
   pointer-events: none;
 }
 
 @keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
+  to { transform: translateY(110vh); }
 }
 
 /* Adornos */
 .decor {
   position: fixed;
-  font-size: 22px;
   animation: fallDecor linear infinite;
-  opacity: 0.9;
   pointer-events: none;
 }
 
 @keyframes fallDecor {
-  to {
-    transform: translateY(110vh) rotate(360deg);
-  }
+  to { transform: translateY(110vh) rotate(360deg); }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Música instrumental navideña -->
+<!-- Música instrumental -->
 <audio autoplay loop>
   <source src="https://cdn.pixabay.com/download/audio/2022/11/21/audio_8d2a67f47d.mp3" type="audio/mpeg">
 </audio>
@@ -111,37 +120,40 @@ h1 {
       <p><strong>Mi amorcito,</strong></p>
 
       <p>
-      en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón. Hoy la distancia
-      me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día, mi rutina favorita,
-      mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento y en cada latido.
+      en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón.
+      Hoy la distancia me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres
+      mi día a día, mi rutina favorita, mi compañerita de vida y mi hogar.
       </p>
 
       <p>
-      Esta Navidad quiero decirte lo mucho que te amo y lo agradecido que estoy con la vida y con Dios por tenerte a mi lado.
-      Nuestro amor se ha convertido en un refugio, en un espacio de paz donde ambos podemos ser nosotros mismos.
-      </p>
-
-      <p>
-      Le pido al Niño Dios que nos permita seguir disfrutando de este amor tan bonito que hemos construido, que cuide
-      nuestro hogar y que nos mantenga unidos en los momentos buenos y en los difíciles, siempre tomados de la mano.
-      </p>
-
-      <p>
-      Gracias por ser mi soporte, mi alegría en los días grises y la persona que siempre está ahí para levantarme.
-      Eres una mujer maravillosa, fuerte y valiente, y me siento profundamente orgulloso de ti.
+      Esta Navidad quiero decirte lo mucho que te amo y lo agradecido que estoy con la vida y con Dios
+      por tenerte a mi lado. Nuestro amor es mi refugio y mi paz.
       </p>
 
       <p>
       <strong>Feliz Navidad, mi niña hermosa.</strong><br>
-      Gracias por ser mi mayor regalo, mi paz y mi amor.<br>
       Te amo con todo mi corazón, hoy y siempre 🎄❤️✨
       </p>
     </div>
+
+    <button onclick="mostrarMensaje()">Tócalo amor 💖</button>
   </div>
 </div>
 
 <script>
-// Nieve
+/* MENSAJE DEL BOTÓN (ARREGLADO) */
+function mostrarMensaje() {
+  alert(
+    "Mi amorcito ❤️\n\n" +
+    "Este mensajito es solo para recordarte lo importante que eres para mí. " +
+    "Eres mi hogar, mi calma y mi mayor bendición. " +
+    "Gracias por existir y por llenar mi vida de amor.\n\n" +
+    "Feliz Navidad, mi niña hermosa 🎄✨\n" +
+    "Te amo hoy y siempre 💖"
+  );
+}
+
+/* Nieve */
 for (let i = 0; i < 35; i++) {
   let snow = document.createElement("div");
   snow.className = "snow";
@@ -152,7 +164,7 @@ for (let i = 0; i < 35; i++) {
   document.body.appendChild(snow);
 }
 
-// Adornos
+/* Adornos */
 const icons = ["🎄","🎁","⛄","🍪","🔔"];
 for (let i = 0; i < 20; i++) {
   let decor = document.createElement("div");
