@@ -1,121 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Navidad Jenni ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Navidad Jenni ❤️</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Georgia', serif;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Georgia',serif}
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(#0b6623, #145a32);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
-      overflow-x: hidden;
-    }
+body{
+min-height:100vh;
+background:linear-gradient(#0b6623,#145a32);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:15px;
+overflow-x:hidden;
+}
 
-    .card {
-      background: linear-gradient(#1e8449, #145a32);
-      max-width: 900px;
-      width: 100%;
-      padding: 25px;
-      border-radius: 22px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.4);
-      position: relative;
-      z-index: 2;
-      color: #ffffff;
-    }
+/* LUCES */
+.lights{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-around;
+font-size:1.8rem;
+animation:blink 1.5s infinite alternate;
+z-index:3;
+}
+@keyframes blink{
+from{opacity:.6}
+to{opacity:1}
+}
 
-    h1 {
-      text-align: center;
-      color: #ffebcd;
-      margin-bottom: 15px;
-    }
+/* TARJETA */
+.card{
+background:linear-gradient(#1e8449,#145a32);
+max-width:900px;
+width:100%;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 35px rgba(0,0,0,.5);
+color:#fff;
+animation:entrada 1.5s ease;
+position:relative;
+z-index:2;
+}
+@keyframes entrada{
+from{opacity:0;transform:scale(.9)}
+to{opacity:1;transform:scale(1)}
+}
 
-    .photo {
-      width: 100%;
-      max-width: 320px;
-      display: block;
-      margin: 0 auto 20px;
-      border-radius: 20px;
-      border: 5px solid #f9e79f;
-    }
+h1{text-align:center;color:#ffebcd;margin-bottom:15px}
 
-    .message {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      text-align: justify;
-      white-space: pre-line;
-    }
+.photo{
+width:100%;
+max-width:320px;
+display:block;
+margin:0 auto 20px;
+border-radius:20px;
+border:5px solid #f9e79f;
+}
 
-    audio {
-      display: block;
-      margin: 25px auto 0;
-      width: 100%;
-    }
+.message{
+font-size:1.05rem;
+line-height:1.8;
+text-align:justify;
+white-space:pre-line;
+}
 
-    /* NIEVE */
-    .snowflake {
-      position: fixed;
-      top: -10px;
-      color: #ffffff;
-      font-size: 1em;
-      animation: fall linear infinite;
-      z-index: 1;
-    }
+audio{width:100%;margin-top:25px}
 
-    @keyframes fall {
-      to {
-        transform: translateY(110vh);
-      }
-    }
+/* BOTÓN */
+button{
+display:block;
+margin:25px auto;
+padding:12px 20px;
+border:none;
+border-radius:20px;
+background:#f9e79f;
+font-size:1rem;
+cursor:pointer;
+}
+button:hover{background:#fdebd0}
 
-    /* DECORACIONES */
-    .decor {
-      position: fixed;
-      top: -50px;
-      font-size: 2rem;
-      animation: decorFall linear infinite;
-      z-index: 1;
-    }
+/* FRASE FINAL */
+#typing{
+text-align:center;
+margin-top:20px;
+font-size:1.2rem;
+font-weight:bold;
+color:#fff8dc;
+}
 
-    @keyframes decorFall {
-      to {
-        transform: translateY(110vh) rotate(360deg);
-      }
-    }
+/* NIEVE */
+.snowflake,.decor,.heart{
+position:fixed;
+top:-10px;
+z-index:1;
+animation:fall linear infinite;
+}
+@keyframes fall{
+to{transform:translateY(110vh)}
+}
 
-    /* ARBOLITOS */
-    .trees {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      font-size: 2.5rem;
-      z-index: 0;
-    }
-  </style>
+.heart{color:#ff6b81;font-size:1.2rem}
+
+/* ÁRBOLES */
+.trees{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+font-size:2.5rem;
+z-index:0;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
-    <h1>🎄 Feliz Navidad, mi amor ❤️</h1>
+<div class="lights">🎄✨🎄✨🎄✨🎄✨🎄</div>
 
-    <img src="jenni.jpeg" alt="Jenni" class="photo">
+<div class="card">
+<h1>🎄 Feliz Navidad, mi amor ❤️</h1>
 
-    <div class="message">
+<img src="jenni.jpeg" class="photo">
+
+<div class="message">
 Mi amorcito,
 
 en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón. Hoy la distancia me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día, mi rutina favorita, mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento y en cada latido.
@@ -131,41 +145,63 @@ Aunque hoy nos separen algunos kilómetros, mi corazón está contigo. Sueño co
 Feliz Navidad, mi niña hermosa.  
 Gracias por ser mi mayor regalo.  
 Te amo hoy y siempre 🎄❤️✨
-    </div>
+</div>
 
-    <!-- MÚSICA NAVIDEÑA INSTRUMENTAL -->
-    <audio controls loop>
-      <source src="https://cdn.pixabay.com/audio/2022/12/01/audio_4b2f5a3a7f.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-  </div>
+<button onclick="alert('Gracias por existir, eres mi hogar ❤️')">
+Tócalo, amorcito 💝
+</button>
 
-  <div class="trees">
-    🌲🎄🌲🎄🌲
-  </div>
+<div id="typing"></div>
 
-  <script>
-    // NIEVE
-    for (let i = 0; i < 45; i++) {
-      let snow = document.createElement("div");
-      snow.className = "snowflake";
-      snow.innerHTML = "❄️";
-      snow.style.left = Math.random() * 100 + "vw";
-      snow.style.animationDuration = 4 + Math.random() * 6 + "s";
-      document.body.appendChild(snow);
-    }
+<audio controls loop>
+<source src="https://cdn.pixabay.com/audio/2022/12/01/audio_4b2f5a3a7f.mp3">
+</audio>
+</div>
 
-    // DECORACIONES
-    const icons = ["🎅", "⛄", "🍪", "🎁", "🔔"];
-    for (let i = 0; i < 25; i++) {
-      let deco = document.createElement("div");
-      deco.className = "decor";
-      deco.innerHTML = icons[Math.floor(Math.random() * icons.length)];
-      deco.style.left = Math.random() * 100 + "vw";
-      deco.style.animationDuration = 5 + Math.random() * 6 + "s";
-      document.body.appendChild(deco);
-    }
-  </script>
+<div class="trees">🌲🎄🌲🎄🌲</div>
+
+<script>
+// NIEVE
+for(let i=0;i<40;i++){
+let s=document.createElement("div");
+s.className="snowflake";
+s.innerHTML="❄️";
+s.style.left=Math.random()*100+"vw";
+s.style.animationDuration=4+Math.random()*6+"s";
+document.body.appendChild(s);
+}
+
+// ADORNOS
+const icons=["🎅","⛄","🎁","🍪","🔔"];
+for(let i=0;i<25;i++){
+let d=document.createElement("div");
+d.className="decor";
+d.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+d.style.left=Math.random()*100+"vw";
+d.style.animationDuration=5+Math.random()*6+"s";
+document.body.appendChild(d);
+}
+
+// CORAZONES
+for(let i=0;i<15;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=6+Math.random()*6+"s";
+document.body.appendChild(h);
+}
+
+// TEXTO ESCRITO
+const text="Te amo hoy, mañana y siempre ❤️";
+let i=0;
+setInterval(()=>{
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+}
+},120);
+</script>
 
 </body>
 </html>
