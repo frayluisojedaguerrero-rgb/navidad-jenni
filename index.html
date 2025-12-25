@@ -84,6 +84,15 @@ transition:0.3s;
 }
 button:hover{background:#fdebd0}
 
+/* MENSAJE NAVIDEÑO DENTRO DE LA PÁGINA */
+#mensajeNavidad{
+text-align:center;
+margin-top:15px;
+font-size:1.1rem;
+color:#fff8dc;
+white-space:pre-line;
+}
+
 /* FRASE FINAL */
 #typing{
 text-align:center;
@@ -146,10 +155,9 @@ Gracias por ser mi mayor regalo.
 Te amo hoy y siempre 🎄❤️✨
 </div>
 
-<!-- BOTÓN FUNCIONAL CON ALERT + MÚSICA LOCAL -->
-<button onclick="playRauwAlejandro()">
-Tócalo, amorcito 💝
-</button>
+<!-- BOTÓN FUNCIONAL CON MENSAJE Y MÚSICA -->
+<button id="botonNavidad">Tócalo, amorcito 💝</button>
+<div id="mensajeNavidad" style="display:none;"></div>
 
 <!-- AUDIO LOCAL -->
 <audio id="rauwAudio" src="tumi24dediciembre.mp3"></audio>
@@ -161,12 +169,19 @@ Tócalo, amorcito 💝
 <div class="trees">🌲🎄🌲🎄🌲</div>
 
 <script>
-// FUNCION BOTÓN ALERT + AUDIO
-function playRauwAlejandro() {
-  alert('Feliz Navidad, mi amorcito 🎄💖\nQue esta Navidad nos llene de abrazos, sonrisas y momentos mágicos juntos. Aunque estemos lejos, siempre estás en mi corazón, mi refugio y mi alegría. Gracias por hacer mi vida tan especial. Te amo muchísimo, mi niña bonita, mi princesa, mi corazón ❤️✨');
-  var audio = document.getElementById("rauwAudio");
-  audio.play();
-}
+// BOTÓN PARA MENSAJE + AUDIO
+const boton = document.getElementById("botonNavidad");
+const mensaje = document.getElementById("mensajeNavidad");
+const audio = document.getElementById("rauwAudio");
+
+boton.addEventListener("click", () => {
+    // Mostrar mensaje navideño en la página
+    mensaje.style.display = "block";
+    mensaje.innerText = "Feliz Navidad, mi amorcito 🎄💖\nQue esta Navidad nos llene de abrazos, sonrisas y momentos mágicos juntos. Aunque estemos lejos, siempre estás en mi corazón, mi refugio y mi alegría. Gracias por hacer mi vida tan especial. Te amo muchísimo, mi niña bonita, mi princesa, mi corazón ❤️✨";
+
+    // Reproducir música
+    audio.play();
+});
 
 // NIEVE
 for(let i=0;i<40;i++){
