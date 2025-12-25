@@ -24,19 +24,20 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.95);
+      background: linear-gradient(#1e8449, #145a32);
       max-width: 900px;
       width: 100%;
       padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      border-radius: 22px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.4);
       position: relative;
       z-index: 2;
+      color: #ffffff;
     }
 
     h1 {
       text-align: center;
-      color: #b71c1c;
+      color: #ffebcd;
       margin-bottom: 15px;
     }
 
@@ -46,27 +47,26 @@
       display: block;
       margin: 0 auto 20px;
       border-radius: 20px;
-      border: 5px solid #c62828;
+      border: 5px solid #f9e79f;
     }
 
     .message {
-      color: #2c3e50;
       font-size: 1.05rem;
-      line-height: 1.7;
+      line-height: 1.8;
       text-align: justify;
       white-space: pre-line;
     }
 
     audio {
       display: block;
-      margin: 20px auto 0;
+      margin: 25px auto 0;
     }
 
     /* NIEVE */
     .snowflake {
       position: fixed;
       top: -10px;
-      color: white;
+      color: #ffffff;
       font-size: 1em;
       animation: fall linear infinite;
       z-index: 1;
@@ -78,7 +78,7 @@
       }
     }
 
-    /* FIGURAS NAVIDEÑAS */
+    /* DECORACIONES */
     .decor {
       position: fixed;
       top: -50px;
@@ -112,8 +112,7 @@
   <div class="card">
     <h1>🎄 Feliz Navidad, mi amor ❤️</h1>
 
-    <!-- FOTO CORREGIDA -->
-    <img src="WhatsApp%20Image%202025-12-24%20at%201.07.38%20AM%20(2).jpeg" alt="Jenni" class="photo">
+    <img src="jenni.jpeg" alt="Jenni" class="photo">
 
     <div class="message">
 Mi amorcito,
@@ -144,23 +143,23 @@ Te amo hoy y siempre 🎄❤️✨
 
   <script>
     // NIEVE
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 45; i++) {
       let snow = document.createElement("div");
       snow.className = "snowflake";
       snow.innerHTML = "❄️";
       snow.style.left = Math.random() * 100 + "vw";
-      snow.style.animationDuration = 5 + Math.random() * 5 + "s";
+      snow.style.animationDuration = 4 + Math.random() * 6 + "s";
       document.body.appendChild(snow);
     }
 
     // DECORACIONES
     const icons = ["🎅", "⛄", "🍪", "🎁", "🔔"];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 25; i++) {
       let deco = document.createElement("div");
       deco.className = "decor";
       deco.innerHTML = icons[Math.floor(Math.random() * icons.length)];
       deco.style.left = Math.random() * 100 + "vw";
-      deco.style.animationDuration = 6 + Math.random() * 6 + "s";
+      deco.style.animationDuration = 5 + Math.random() * 6 + "s";
       document.body.appendChild(deco);
     }
   </script>
