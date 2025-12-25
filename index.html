@@ -2,67 +2,33 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Feliz Navidad, mi amor ❤️</title>
 
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
-    padding: 0;
     font-family: 'Georgia', serif;
     background: linear-gradient(to bottom, #0f3d2e, #1e6f4e);
     color: white;
     text-align: center;
-    overflow-x: hidden;
+    min-height: 100vh;
   }
 
-  .container {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .tree {
-    font-size: 60px;
-    margin: 0 20px;
-  }
-
-  .card {
-    background: rgba(30, 111, 78, 0.95);
-    border-radius: 25px;
-    padding: 30px;
-    max-width: 700px;
-    box-shadow: 0 0 30px rgba(255,255,255,0.3);
-  }
-
-  h1 {
-    color: #ffd700;
-  }
-
-  p {
-    font-size: 1.1em;
-    line-height: 1.7;
-  }
-
-  img {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 20px;
-    margin: 20px 0;
-    box-shadow: 0 0 20px rgba(255,255,255,0.5);
-  }
-
-  /* LUCES */
   .lights {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin: 25px 0;
+    gap: 12px;
+    padding: 15px;
   }
 
   .lights span {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     animation: blink 1.5s infinite alternate;
   }
@@ -78,31 +44,84 @@
     to { opacity: 1; }
   }
 
+  .container {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .tree {
+    font-size: 45px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .card {
+    background: rgba(30, 111, 78, 0.96);
+    border-radius: 25px;
+    padding: 20px;
+    max-width: 720px;
+    width: 100%;
+    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  }
+
+  h1 {
+    color: #ffd700;
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 20px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  }
+
+  footer {
+    margin-top: 25px;
+    font-style: italic;
+    color: #ffd700;
+    text-align: center;
+  }
+
   /* NIEVE */
   .snowflake {
     position: fixed;
     top: -10px;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
     animation: fall linear infinite;
     z-index: 9999;
   }
 
   .snowflake:nth-child(1) { left: 10%; animation-duration: 10s; }
   .snowflake:nth-child(2) { left: 30%; animation-duration: 12s; }
-  .snowflake:nth-child(3) { left: 50%; animation-duration: 8s; }
+  .snowflake:nth-child(3) { left: 50%; animation-duration: 9s; }
   .snowflake:nth-child(4) { left: 70%; animation-duration: 11s; }
-  .snowflake:nth-child(5) { left: 90%; animation-duration: 9s; }
+  .snowflake:nth-child(5) { left: 90%; animation-duration: 8s; }
 
   @keyframes fall {
-    0% { top: -10px; opacity: 1; }
-    100% { top: 100vh; opacity: 0; }
+    to { transform: translateY(110vh); opacity: 0; }
   }
 
-  footer {
-    margin-top: 30px;
-    font-style: italic;
-    color: #ffd700;
+  /* CELULAR */
+  @media (max-width: 768px) {
+    .tree {
+      display: none;
+    }
+    p {
+      font-size: 1em;
+    }
   }
 </style>
 </head>
@@ -122,30 +141,55 @@
   <div class="tree">🎄</div>
 
   <div class="card">
-    <h1>🎄 Amorcito ❤️</h1>
+    <h1>🎄 Mi amorcito ❤️</h1>
 
     <img src="TU_IMAGEN_AQUI.jpg" alt="Nosotros">
 
     <p>
-      En esta noche buena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón.
-      Aunque hoy la distancia nos separe, mi amor por ti sigue más fuerte que nunca.
-      Eres mi día a día, mi compañerita de vida y mi hogar.
+      En esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón.
+      Hoy la distancia me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día,
+      mi rutina favorita, mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento
+      y en cada latido.
     </p>
 
     <p>
-      Que el amor y la paz sean el pilar fundamental de nuestra relación en este nuevo año.
-      Que el Niño Dios nos permita seguir caminando juntos,
-      compartiendo sueños, abrazos y momentos inolvidables.
+      Esta Navidad quiero decirte lo mucho que te amo, lo agradecido que estoy con la vida y con Dios por tenerte
+      a mi lado. Nuestro amor se ha convertido en un refugio, en un espacio de paz donde ambos podemos ser nosotros mismos.
+      Deseo con todo mi corazón que el amor y la paz sigan siendo el pilar fundamental de nuestra relación en este nuevo
+      año que está por venir.
     </p>
 
     <p>
-      Deseo que la alegría reine en nuestros corazones
-      y que Dios te bendiga con mucho trabajo, éxitos y bendiciones,
-      porque mereces todo lo bonito que la vida puede ofrecer.
+      Le pido al Niño Dios que nos permita seguir disfrutando de este amor tan bonito que hemos construido,
+      que cuide nuestro hogar y que nos mantenga unidos en los momentos buenos y en los difíciles.
+      Que nunca falte el respeto, la comprensión y las ganas de seguir luchando juntos, tomados de la mano.
+    </p>
+
+    <p>
+      Gracias por ser mi soporte, mi alegría en los días grises y la persona que siempre está ahí para levantarme.
+      A tu lado aprendí a amar de verdad, a confiar y a creer en un futuro juntos.
+      Eres una chica maravillosa, fuerte y valiente, y me siento profundamente orgulloso
+      de la mujer y la gran profesional en la que te estás convirtiendo.
+    </p>
+
+    <p>
+      Aunque hoy nos separen algunos kilómetros, mi corazón está contigo.
+      Extraño nuestras pequeñas costumbres, nuestros abrazos, nuestras conversaciones
+      y cada momento compartido. Sueño con el día en que volvamos a estar juntos,
+      construyendo nuestra vida, nuestro hogar y nuestros sueños.
+    </p>
+
+    <p>
+      Que esta Navidad la alegría reine en nuestros corazones,
+      que nunca nos falte la esperanza y que Dios te bendiga con mucha salud,
+      trabajo y éxitos en todo lo que emprendas.
+      Yo prometo seguir cuidándote, apoyándote y amándote cada día más.
     </p>
 
     <footer>
-      Con todo mi amor, hoy y siempre ❤️
+      Feliz Navidad, mi niña hermosa.  
+      Gracias por ser mi mayor regalo, mi paz y mi amor.  
+      Te amo con todo mi corazón, hoy y siempre 🎄❤️✨
     </footer>
   </div>
 
