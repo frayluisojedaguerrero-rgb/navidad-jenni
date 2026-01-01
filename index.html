@@ -18,7 +18,18 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow:hidden;
   padding:20px;
+}
+
+/* CONTENEDOR */
+.wrapper{
+  position:relative;
+  max-width:900px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 /* TARJETA */
@@ -30,6 +41,7 @@ body{
   border-radius:22px;
   box-shadow:0 20px 50px rgba(0,0,0,.35);
   color:#4a235a;
+  z-index:2;
 }
 
 /* TITULO */
@@ -46,20 +58,27 @@ h1{
   white-space:pre-line;
 }
 
-/* BOTÓN */
-button{
-  display:block;
-  margin:30px auto 0;
-  padding:12px 25px;
-  border:none;
-  border-radius:20px;
-  background:#f7c6d9;
-  font-size:1rem;
-  cursor:pointer;
+/* OSITOS */
+.bear{
+  position:absolute;
+  font-size:90px;
+  bottom:10px;
 }
-button:hover{
-  background:#f4b6cf;
+
+.bear.left{ left:0 }
+.bear.right{ right:0 }
+
+/* RAMOS DE ROSAS */
+.roses{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:55px;
+  opacity:0.9;
 }
+
+.roses.left{ left:-20px }
+.roses.right{ right:-20px }
 
 /* CORAZONES */
 .heart{
@@ -79,19 +98,28 @@ button:hover{
 
 <body>
 
-<div class="card">
-  <h1>✨ Feliz Año Nuevo, mi amor ❤️</h1>
-  <div id="typed"></div>
+<div class="wrapper">
 
-  <button onclick="playMensaje()">
-    Tócalo, amorcito 💝
-  </button>
+  <!-- RAMOS -->
+  <div class="roses left">🌹💐🌹</div>
+  <div class="roses right">🌹💐🌹</div>
+
+  <!-- OSITOS -->
+  <div class="bear left">🧸❤️</div>
+  <div class="bear right">🧸❤️</div>
+
+  <!-- CARTA -->
+  <div class="card">
+    <h1>✨ Feliz Año Nuevo, mi amor ❤️</h1>
+    <div id="typed"></div>
+  </div>
+
 </div>
 
 <audio id="audio" src="tumi24dediciembre.mp3"></audio>
 
 <script>
-// MENSAJE AÑO NUEVO
+// MENSAJE
 const text = `Mi amorcito,
 
 Hoy despedimos un año más de nuestra historia y solo puedo agradecerle a la vida por haberte puesto en mi camino. Contigo aprendí que amar es cuidar, comprender y quedarse incluso cuando las cosas no son fáciles.
@@ -117,11 +145,6 @@ const typing = setInterval(()=>{
     clearInterval(typing);
   }
 }, 140);
-
-// BOTÓN + MÚSICA
-function playMensaje(){
-  document.getElementById("audio").play();
-}
 
 // CORAZONES
 setInterval(()=>{
