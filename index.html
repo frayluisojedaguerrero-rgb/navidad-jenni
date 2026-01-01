@@ -5,148 +5,125 @@
 <title>Año Nuevo para Jenni ❤️</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
-
-body{
-min-height:100vh;
-background:linear-gradient(135deg,#1a1a40,#3a0ca3,#7209b7);
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
-padding:20px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Georgia',serif;
 }
 
-/* CONTENEDOR */
-.container{
-display:flex;
-gap:40px;
-align-items:center;
-position:relative;
-z-index:2;
+body{
+  min-height:100vh;
+  background:linear-gradient(to top,#ffd1dc,#ffeef2,#ffffff);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
 }
 
 /* CARTA */
 .card{
-background:#fffaf0;
-width:420px;
-padding:30px;
-border-radius:18px;
-box-shadow:0 0 40px rgba(0,0,0,.4);
-font-size:1.1rem;
-line-height:1.8;
-color:#4a235a;
+  background:#fff;
+  width:420px;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  z-index:2;
+  color:#6b1e3e;
+  font-size:1.1rem;
+  line-height:1.8;
 }
 
-/* TEXTO ESCRITO */
 #typed{
-white-space:pre-line;
+  white-space:pre-line;
 }
 
 /* CAMPO DE TULIPANES */
 .field{
-position:absolute;
-bottom:0;
-left:0;
-width:100%;
-height:35%;
-display:flex;
-justify-content:space-around;
-align-items:flex-end;
-z-index:1;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:35%;
+  display:flex;
+  justify-content:space-evenly;
+  align-items:flex-end;
+  z-index:1;
+  background:linear-gradient(to top,#7ec850,#b6e8a6);
 }
 
 /* TULIPÁN */
 .tulip{
-position:relative;
-width:20px;
-height:120px;
+  position:relative;
+  width:24px;
+  height:120px;
 }
 
-/* TALLO */
 .stem{
-position:absolute;
-bottom:0;
-left:50%;
-transform:translateX(-50%);
-width:4px;
-height:90px;
-background:#2ecc71;
-border-radius:2px;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:4px;
+  height:90px;
+  background:#2e8b57;
 }
 
-/* FLOR */
 .flower{
-position:absolute;
-bottom:85px;
-left:50%;
-transform:translateX(-50%);
-width:22px;
-height:28px;
-background:radial-gradient(circle at top,#ffb6c1,#ff4d6d);
-border-radius:50% 50% 40% 40%;
+  position:absolute;
+  bottom:85px;
+  left:50%;
+  transform:translateX(-50%);
+  width:28px;
+  height:28px;
+  background:radial-gradient(circle,#ff9ebc,#ff4f81);
+  border-radius:50%;
 }
-
-/* HOJAS */
-.leaf{
-position:absolute;
-bottom:30px;
-width:14px;
-height:40px;
-background:#27ae60;
-border-radius:20px;
-}
-.leaf.left{left:-12px;transform:rotate(-20deg)}
-.leaf.right{right:-12px;transform:rotate(20deg)}
 
 /* CORAZONES */
 .heart{
-position:fixed;
-top:-10px;
-color:#ff6b9c;
-font-size:18px;
-animation:fall linear infinite;
-z-index:0;
+  position:fixed;
+  top:-10px;
+  color:#ff5fa2;
+  font-size:18px;
+  animation:fall linear infinite;
 }
 
 @keyframes fall{
-to{transform:translateY(110vh);opacity:0}
+  to{
+    transform:translateY(110vh);
+    opacity:0;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="card">
-    <div id="typed"></div>
-  </div>
+<div class="card">
+  <div id="typed"></div>
 </div>
 
-<!-- CAMPO DE TULIPANES -->
+<!-- CAMPO -->
 <div class="field">
-  <!-- Generamos varios tulipanes -->
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div><div class="leaf left"></div><div class="leaf right"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
 </div>
 
 <script>
-// TEXTO QUE SE ESCRIBE PALABRA POR PALABRA
+// TEXTO
 const text = `Mi amorcito ❤️
 
-Hoy cerramos un año más de nuestra historia y abrimos uno nuevo, con el corazón lleno de ilusión.
+Comienza un nuevo año y con él, nuevas ilusiones a tu lado.
 
-Gracias por cada sonrisa, cada abrazo y cada momento que ha florecido entre nosotros.
+Gracias por ser mi paz, mi alegría y mi lugar seguro.
 
-Este nuevo año quiero seguir eligiéndote, seguir construyendo sueños contigo y llamarte siempre mi hogar.
+Que este año florezca nuestro amor, como este campo lleno de tulipanes.
 
-Que nuestro amor siga creciendo, fuerte y bonito, como un campo lleno de flores.
-
-Feliz Año Nuevo, mi niña hermosa.
+Feliz Año Nuevo, mi niña bonita.
 Te amo hoy, mañana y siempre 💕`;
 
 let words = text.split(" ");
@@ -160,21 +137,21 @@ const typing = setInterval(()=>{
   } else {
     clearInterval(typing);
   }
-}, 170);
+}, 180);
 
-// CORAZONES CAYENDO
-function createHeart(){
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.animationDuration = 4 + Math.random()*5 + "s";
-  document.body.appendChild(heart);
-
-  setTimeout(()=>heart.remove(),9000);
+// CORAZONES
+function heart(){
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "❤️";
+  h.style.left = Math.random()*100 + "vw";
+  h.style.animationDuration = 4 + Math.random()*4 + "s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
 }
-setInterval(createHeart, 450);
+setInterval(heart, 400);
 </script>
 
 </body>
 </html>
+
