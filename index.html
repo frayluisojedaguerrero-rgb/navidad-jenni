@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Año Nuevo para Jenni ❤️</title>
+<title>Año Nuevo – Para Jenni ❤️</title>
 
 <style>
 *{
@@ -14,21 +14,20 @@
 
 body{
   min-height:100vh;
-  background:linear-gradient(to top,#ffd1dc,#ffeef2,#ffffff);
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  background:linear-gradient(to top,#ffd6e8,#fff0f6,#ffffff);
   overflow:hidden;
 }
 
 /* CARTA */
 .card{
+  position:relative;
+  margin:40px auto;
   background:#fff;
   width:420px;
   padding:30px;
-  border-radius:20px;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
-  z-index:2;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+  z-index:3;
   color:#6b1e3e;
   font-size:1.1rem;
   line-height:1.8;
@@ -38,24 +37,30 @@ body{
   white-space:pre-line;
 }
 
-/* CAMPO DE TULIPANES */
+/* CAMPO */
 .field{
   position:fixed;
   bottom:0;
   width:100%;
-  height:35%;
+  height:45%;
+  background:linear-gradient(to top,#7ecf9a,#bff0d4);
   display:flex;
-  justify-content:space-evenly;
   align-items:flex-end;
+  justify-content:space-evenly;
   z-index:1;
-  background:linear-gradient(to top,#7ec850,#b6e8a6);
 }
 
 /* TULIPÁN */
 .tulip{
   position:relative;
-  width:24px;
-  height:120px;
+  width:26px;
+  height:140px;
+  animation:grow 3s ease forwards;
+}
+
+@keyframes grow{
+  from{transform:scaleY(0)}
+  to{transform:scaleY(1)}
 }
 
 .stem{
@@ -73,26 +78,78 @@ body{
   bottom:85px;
   left:50%;
   transform:translateX(-50%);
-  width:28px;
+  width:30px;
+  height:30px;
+  background:#ff5c8a;
+  border-radius:50% 50% 40% 40%;
+}
+
+.petals:before,
+.petals:after{
+  content:'';
+  position:absolute;
+  width:22px;
   height:28px;
-  background:radial-gradient(circle,#ff9ebc,#ff4f81);
+  background:#ff85a2;
   border-radius:50%;
+}
+
+.petals:before{
+  left:-10px;
+}
+
+.petals:after{
+  right:-10px;
+}
+
+/* ÁRBOLES */
+.tree{
+  position:absolute;
+  bottom:0;
+  width:70px;
+  height:160px;
+}
+
+.trunk{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:16px;
+  height:60px;
+  background:#7a4a2e;
+}
+
+.crown{
+  position:absolute;
+  bottom:50px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90px;
+  height:90px;
+  background:radial-gradient(circle,#ffc0d9,#ff8fab);
+  border-radius:50%;
+}
+
+/* OSITOS */
+.bear{
+  position:absolute;
+  bottom:15px;
+  font-size:36px;
 }
 
 /* CORAZONES */
 .heart{
   position:fixed;
   top:-10px;
-  color:#ff5fa2;
+  color:#ff6fae;
   font-size:18px;
   animation:fall linear infinite;
+  z-index:0;
 }
 
 @keyframes fall{
-  to{
-    transform:translateY(110vh);
-    opacity:0;
-  }
+  to{transform:translateY(110vh);opacity:0}
 }
 </style>
 </head>
@@ -105,53 +162,71 @@ body{
 
 <!-- CAMPO -->
 <div class="field">
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
-  <div class="tulip"><div class="flower"></div><div class="stem"></div></div>
+  <!-- TULIPANES -->
+  <script>
+    for(let i=0;i<20;i++){
+      document.write(`
+        <div class="tulip" style="animation-delay:${Math.random()*2}s">
+          <div class="flower">
+            <div class="petals"></div>
+          </div>
+          <div class="stem"></div>
+        </div>
+      `);
+    }
+  </script>
+
+  <!-- ÁRBOLES -->
+  <div class="tree" style="left:5%">
+    <div class="crown"></div>
+    <div class="trunk"></div>
+  </div>
+
+  <div class="tree" style="right:5%">
+    <div class="crown"></div>
+    <div class="trunk"></div>
+  </div>
+
+  <!-- OSITOS -->
+  <div class="bear" style="left:20%">🧸💖</div>
+  <div class="bear" style="right:20%">🧸💕</div>
 </div>
 
 <script>
 // TEXTO
 const text = `Mi amorcito ❤️
 
-Comienza un nuevo año y con él, nuevas ilusiones a tu lado.
+Un nuevo año comienza y mi mayor deseo es seguir floreciendo contigo.
 
-Gracias por ser mi paz, mi alegría y mi lugar seguro.
+Que nuestro amor crezca cada día, como este campo lleno de flores, ternura y sueños compartidos.
 
-Que este año florezca nuestro amor, como este campo lleno de tulipanes.
+Gracias por ser mi refugio, mi alegría y mi hogar.
 
 Feliz Año Nuevo, mi niña bonita.
 Te amo hoy, mañana y siempre 💕`;
 
 let words = text.split(" ");
-let i = 0;
-const typed = document.getElementById("typed");
+let i=0;
+const typed=document.getElementById("typed");
 
-const typing = setInterval(()=>{
-  if(i < words.length){
-    typed.innerHTML += words[i] + " ";
+const typing=setInterval(()=>{
+  if(i<words.length){
+    typed.innerHTML+=words[i]+" ";
     i++;
-  } else {
-    clearInterval(typing);
-  }
-}, 180);
+  }else clearInterval(typing);
+},180);
 
 // CORAZONES
-function heart(){
-  const h = document.createElement("div");
-  h.className = "heart";
-  h.innerHTML = "❤️";
-  h.style.left = Math.random()*100 + "vw";
-  h.style.animationDuration = 4 + Math.random()*4 + "s";
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="❤️";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=4+Math.random()*4+"s";
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),9000);
-}
-setInterval(heart, 400);
+},350);
 </script>
 
 </body>
 </html>
-
