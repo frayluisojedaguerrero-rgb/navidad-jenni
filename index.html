@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Año Nuevo – Para Jenni ❤️</title>
+<title>Feliz Año Nuevo, Jenni ❤️</title>
 
 <style>
 *{
@@ -14,128 +14,51 @@
 
 body{
   min-height:100vh;
-  background:linear-gradient(to top,#ffd6e8,#fff0f6,#ffffff);
-  overflow:hidden;
+  background:linear-gradient(135deg,#1a1a40,#3a0ca3,#7209b7);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
 }
 
-/* CARTA */
+/* TARJETA */
 .card{
-  position:relative;
-  margin:40px auto;
-  background:#fff;
-  width:420px;
-  padding:30px;
+  background:#fffaf0;
+  max-width:520px;
+  width:100%;
+  padding:35px;
   border-radius:22px;
-  box-shadow:0 20px 50px rgba(0,0,0,.25);
-  z-index:3;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  color:#4a235a;
+}
+
+/* TITULO */
+h1{
+  text-align:center;
+  margin-bottom:20px;
   color:#6b1e3e;
+}
+
+/* TEXTO */
+#typed{
   font-size:1.1rem;
   line-height:1.8;
-}
-
-#typed{
   white-space:pre-line;
 }
 
-/* CAMPO */
-.field{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  height:45%;
-  background:linear-gradient(to top,#7ecf9a,#bff0d4);
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-evenly;
-  z-index:1;
+/* BOTÓN */
+button{
+  display:block;
+  margin:30px auto 0;
+  padding:12px 25px;
+  border:none;
+  border-radius:20px;
+  background:#f7c6d9;
+  font-size:1rem;
+  cursor:pointer;
 }
-
-/* TULIPÁN */
-.tulip{
-  position:relative;
-  width:26px;
-  height:140px;
-  animation:grow 3s ease forwards;
-}
-
-@keyframes grow{
-  from{transform:scaleY(0)}
-  to{transform:scaleY(1)}
-}
-
-.stem{
-  position:absolute;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:4px;
-  height:90px;
-  background:#2e8b57;
-}
-
-.flower{
-  position:absolute;
-  bottom:85px;
-  left:50%;
-  transform:translateX(-50%);
-  width:30px;
-  height:30px;
-  background:#ff5c8a;
-  border-radius:50% 50% 40% 40%;
-}
-
-.petals:before,
-.petals:after{
-  content:'';
-  position:absolute;
-  width:22px;
-  height:28px;
-  background:#ff85a2;
-  border-radius:50%;
-}
-
-.petals:before{
-  left:-10px;
-}
-
-.petals:after{
-  right:-10px;
-}
-
-/* ÁRBOLES */
-.tree{
-  position:absolute;
-  bottom:0;
-  width:70px;
-  height:160px;
-}
-
-.trunk{
-  position:absolute;
-  bottom:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:16px;
-  height:60px;
-  background:#7a4a2e;
-}
-
-.crown{
-  position:absolute;
-  bottom:50px;
-  left:50%;
-  transform:translateX(-50%);
-  width:90px;
-  height:90px;
-  background:radial-gradient(circle,#ffc0d9,#ff8fab);
-  border-radius:50%;
-}
-
-/* OSITOS */
-.bear{
-  position:absolute;
-  bottom:15px;
-  font-size:36px;
+button:hover{
+  background:#f4b6cf;
 }
 
 /* CORAZONES */
@@ -157,75 +80,59 @@ body{
 <body>
 
 <div class="card">
+  <h1>✨ Feliz Año Nuevo, mi amor ❤️</h1>
   <div id="typed"></div>
+
+  <button onclick="playMensaje()">
+    Tócalo, amorcito 💝
+  </button>
 </div>
 
-<!-- CAMPO -->
-<div class="field">
-  <!-- TULIPANES -->
-  <script>
-    for(let i=0;i<20;i++){
-      document.write(`
-        <div class="tulip" style="animation-delay:${Math.random()*2}s">
-          <div class="flower">
-            <div class="petals"></div>
-          </div>
-          <div class="stem"></div>
-        </div>
-      `);
-    }
-  </script>
-
-  <!-- ÁRBOLES -->
-  <div class="tree" style="left:5%">
-    <div class="crown"></div>
-    <div class="trunk"></div>
-  </div>
-
-  <div class="tree" style="right:5%">
-    <div class="crown"></div>
-    <div class="trunk"></div>
-  </div>
-
-  <!-- OSITOS -->
-  <div class="bear" style="left:20%">🧸💖</div>
-  <div class="bear" style="right:20%">🧸💕</div>
-</div>
+<audio id="audio" src="tumi24dediciembre.mp3"></audio>
 
 <script>
-// TEXTO
-const text = `Mi amorcito ❤️
+// MENSAJE AÑO NUEVO
+const text = `Mi amorcito,
 
-Un nuevo año comienza y mi mayor deseo es seguir floreciendo contigo.
+Hoy despedimos un año más de nuestra historia y solo puedo agradecerle a la vida por haberte puesto en mi camino. Contigo aprendí que amar es cuidar, comprender y quedarse incluso cuando las cosas no son fáciles.
 
-Que nuestro amor crezca cada día, como este campo lleno de flores, ternura y sueños compartidos.
+Aunque la distancia hoy nos separe, sigues siendo mi hogar, mi rutina favorita y la persona que llena mis días de paz. Extraño cada momento a tu lado, pero llevo tu amor conmigo en cada paso que doy.
 
-Gracias por ser mi refugio, mi alegría y mi hogar.
+Gracias por tu paciencia, por tu apoyo y por ser mi refugio en los días grises. Perdóname por mis errores; nunca dudes del amor tan grande que siento por ti.
+
+Este nuevo año quiero seguir eligiéndote, apoyarte y construir nuestros sueños juntos.
 
 Feliz Año Nuevo, mi niña bonita.
-Te amo hoy, mañana y siempre 💕`;
+Te amo hoy, mañana y siempre ❤️`;
 
 let words = text.split(" ");
-let i=0;
-const typed=document.getElementById("typed");
+let i = 0;
+const typed = document.getElementById("typed");
 
-const typing=setInterval(()=>{
-  if(i<words.length){
-    typed.innerHTML+=words[i]+" ";
+const typing = setInterval(()=>{
+  if(i < words.length){
+    typed.innerHTML += words[i] + " ";
     i++;
-  }else clearInterval(typing);
-},180);
+  } else {
+    clearInterval(typing);
+  }
+}, 140);
+
+// BOTÓN + MÚSICA
+function playMensaje(){
+  document.getElementById("audio").play();
+}
 
 // CORAZONES
 setInterval(()=>{
-  const h=document.createElement("div");
-  h.className="heart";
-  h.innerHTML="❤️";
-  h.style.left=Math.random()*100+"vw";
-  h.style.animationDuration=4+Math.random()*4+"s";
+  const h = document.createElement("div");
+  h.className = "heart";
+  h.innerHTML = "❤️";
+  h.style.left = Math.random()*100 + "vw";
+  h.style.animationDuration = 4 + Math.random()*4 + "s";
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),9000);
-},350);
+}, 400);
 </script>
 
 </body>
