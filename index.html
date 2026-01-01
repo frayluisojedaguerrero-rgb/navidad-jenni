@@ -2,227 +2,150 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Feliz Navidad Jenni ❤️</title>
+<title>Año Nuevo para Jenni ❤️</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Georgia',serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
 
 body{
 min-height:100vh;
-background:linear-gradient(#0b6623,#145a32);
+background:linear-gradient(135deg,#1a1a40,#3a0ca3,#7209b7);
 display:flex;
 justify-content:center;
 align-items:center;
-padding:15px;
-overflow-x:hidden;
+overflow:hidden;
+padding:20px;
 }
 
-/* LUCES */
-.lights{
-position:fixed;
-top:0;
-width:100%;
+/* CONTENEDOR */
+.container{
 display:flex;
-justify-content:space-around;
-font-size:1.8rem;
-animation:blink 1.5s infinite alternate;
-z-index:3;
-}
-@keyframes blink{
-from{opacity:.6}
-to{opacity:1}
+gap:40px;
+align-items:center;
 }
 
-/* TARJETA */
+/* CARTA */
 .card{
-background:linear-gradient(#1e8449,#145a32);
-max-width:900px;
-width:100%;
-padding:25px;
-border-radius:25px;
-box-shadow:0 0 35px rgba(0,0,0,.5);
-color:#fff;
-animation:entrada 1.5s ease;
-position:relative;
-z-index:2;
-}
-@keyframes entrada{
-from{opacity:0;transform:scale(.9)}
-to{opacity:1;transform:scale(1)}
-}
-
-h1{text-align:center;color:#ffebcd;margin-bottom:15px}
-
-.photo{
-width:100%;
-max-width:320px;
-display:block;
-margin:0 auto 20px;
-border-radius:20px;
-border:5px solid #f9e79f;
-}
-
-.message{
-font-size:1.05rem;
-line-height:1.8;
-text-align:justify;
-white-space:pre-line;
-}
-
-/* BOTÓN */
-button{
-display:block;
-margin:25px auto;
-padding:12px 20px;
-border:none;
-border-radius:20px;
-background:#f9e79f;
-font-size:1rem;
-cursor:pointer;
-transition:0.3s;
-}
-button:hover{background:#fdebd0}
-
-/* MENSAJE NAVIDEÑO DENTRO DE LA PÁGINA */
-#mensajeNavidad{
-text-align:center;
-margin-top:15px;
+background:#fffaf0;
+width:420px;
+padding:30px;
+border-radius:18px;
+box-shadow:0 0 40px rgba(0,0,0,.4);
 font-size:1.1rem;
-color:#fff8dc;
+line-height:1.8;
+color:#4a235a;
+}
+
+/* TEXTO ESCRITO */
+#typed{
 white-space:pre-line;
 }
 
-/* FRASE FINAL */
-#typing{
-text-align:center;
-margin-top:20px;
-font-size:1.2rem;
-font-weight:bold;
-color:#fff8dc;
+/* ÁRBOL */
+.tree{
+position:relative;
+width:200px;
+height:320px;
 }
 
-/* NIEVE */
-.snowflake,.decor,.heart{
-position:fixed;
-top:-10px;
-z-index:1;
+/* TRONCO */
+.trunk{
+position:absolute;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+width:40px;
+height:120px;
+background:#6e2c00;
+border-radius:10px;
+}
+
+/* COPA */
+.crown{
+position:absolute;
+bottom:90px;
+left:50%;
+transform:translateX(-50%);
+width:180px;
+height:180px;
+background:radial-gradient(circle,#ffb6c1,#ff69b4);
+border-radius:50%;
+}
+
+/* CORAZONES */
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:18px;
 animation:fall linear infinite;
 }
+
 @keyframes fall{
-to{transform:translateY(110vh)}
-}
-
-.heart{color:#ff6b81;font-size:1.2rem}
-
-/* ÁRBOLES */
-.trees{
-position:fixed;
-bottom:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-font-size:2.5rem;
-z-index:0;
+0%{transform:translateY(0);opacity:1}
+100%{transform:translateY(350px);opacity:0}
 }
 </style>
 </head>
 
 <body>
 
-<div class="lights">🎄✨🎄✨🎄✨🎄✨🎄</div>
+<div class="container">
 
-<div class="card">
-<h1>🎄 Feliz Navidad, mi amor ❤️</h1>
+  <!-- CARTA -->
+  <div class="card">
+    <div id="typed"></div>
+  </div>
 
-<img src="jenni.jpeg" class="photo">
-
-<div class="message">
-Mi amorcito,
-
-en esta Nochebuena quiero dedicarte estas palabras que nacen desde lo más profundo de mi corazón. Hoy la distancia me pone un poco triste, porque contigo me he acostumbrado a hacerlo todo; tú eres mi día a día, mi rutina favorita, mi compañerita de vida y mi hogar. Aun estando lejos, te siento cerca en cada pensamiento y en cada latido.
-
-Esta Navidad quiero decirte lo mucho que te amo, lo agradecido que estoy con la vida y con Dios por tenerte a mi lado. Nuestro amor se ha convertido en un refugio, en un espacio de paz donde ambos podemos ser nosotros mismos. Deseo con todo mi corazón que el amor y la paz sigan siendo el pilar fundamental de nuestra relación en este nuevo año que está por venir.
-
-Le pido al Niño Dios que nos permita seguir disfrutando de este amor tan bonito que hemos construido, que cuide nuestro hogar y que nos mantenga unidos en los momentos buenos y en los difíciles. Que nunca falte el respeto, la comprensión y las ganas de seguir luchando juntos, tomados de la mano.
-
-Gracias por ser mi soporte, mi alegría en los días grises y la persona que siempre está ahí para levantarme. Eres una chica maravillosa, fuerte y valiente, y me siento profundamente orgulloso de la mujer y la gran profesional en la que te estás convirtiendo.
-
-Aunque hoy nos separen algunos kilómetros, mi corazón está contigo. Sueño con el día en que volvamos a estar juntos, construyendo nuestra vida, nuestro hogar y nuestros sueños.
-
-Feliz Navidad, mi niña hermosa.  
-Gracias por ser mi mayor regalo.  
-Te amo hoy y siempre 🎄❤️✨
-</div>
-
-<!-- BOTÓN FUNCIONAL CON MENSAJE Y MÚSICA -->
-<button id="botonNavidad">Tócalo, amorcito 💝</button>
-<div id="mensajeNavidad" style="display:none;"></div>
-
-<!-- AUDIO LOCAL -->
-<audio id="rauwAudio" src="tumi24dediciembre.mp3"></audio>
-
-<div id="typing"></div>
+  <!-- ÁRBOL -->
+  <div class="tree">
+    <div class="crown"></div>
+    <div class="trunk"></div>
+  </div>
 
 </div>
-
-<div class="trees">🌲🎄🌲🎄🌲</div>
 
 <script>
-// BOTÓN PARA MENSAJE + AUDIO
-const boton = document.getElementById("botonNavidad");
-const mensaje = document.getElementById("mensajeNavidad");
-const audio = document.getElementById("rauwAudio");
+// TEXTO AÑO NUEVO
+const text = `Mi amorcito ❤️
 
-boton.addEventListener("click", () => {
-    // Mostrar mensaje navideño en la página
-    mensaje.style.display = "block";
-    mensaje.innerText = "Feliz Navidad, mi amorcito 🎄💖\nQue esta Navidad nos llene de abrazos, sonrisas y momentos mágicos juntos. Aunque estemos lejos, siempre estás en mi corazón, mi refugio y mi alegría. Gracias por hacer mi vida tan especial. Te amo muchísimo, mi niña bonita, mi princesa, mi corazón ❤️✨";
+Hoy cerramos un año más de nuestra historia y le damos la bienvenida a uno nuevo, tomados de la mano.
 
-    // Reproducir música
-    audio.play();
-});
+Gracias por cada sonrisa, cada abrazo, cada momento bonito y también por aquellos días difíciles que nos hicieron más fuertes.
 
-// NIEVE
-for(let i=0;i<40;i++){
-let s=document.createElement("div");
-s.className="snowflake";
-s.innerHTML="❄️";
-s.style.left=Math.random()*100+"vw";
-s.style.animationDuration=4+Math.random()*6+"s";
-document.body.appendChild(s);
+Este nuevo año quiero seguir construyendo sueños contigo, seguir eligiéndote todos los días y seguir llamándote mi hogar.
+
+Que nunca nos falte amor, paciencia y ganas de luchar juntos.
+
+Feliz Año Nuevo, mi niña bonita.
+Te amo hoy, mañana y siempre 💕`;
+
+let words = text.split(" ");
+let i = 0;
+const typed = document.getElementById("typed");
+
+const typing = setInterval(()=>{
+  if(i < words.length){
+    typed.innerHTML += words[i] + " ";
+    i++;
+  } else {
+    clearInterval(typing);
+  }
+}, 180);
+
+// CORAZONES QUE CAEN DEL ÁRBOL
+function createHeart(){
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = (50 + Math.random()*100 - 50) + "px";
+  heart.style.top = "80px";
+  heart.style.animationDuration = 3 + Math.random()*4 + "s";
+  document.querySelector(".tree").appendChild(heart);
+
+  setTimeout(()=>heart.remove(),7000);
 }
 
-// ADORNOS
-const icons=["🎅","⛄","🎁","🍪","🔔"];
-for(let i=0;i<25;i++){
-let d=document.createElement("div");
-d.className="decor";
-d.innerHTML=icons[Math.floor(Math.random()*icons.length)];
-d.style.left=Math.random()*100+"vw";
-d.style.animationDuration=5+Math.random()*6+"s";
-document.body.appendChild(d);
-}
-
-// CORAZONES
-for(let i=0;i<15;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=6+Math.random()*6+"s";
-document.body.appendChild(h);
-}
-
-// TEXTO ESCRITO
-const text="Te amo hoy, mañana y siempre ❤️";
-let i=0;
-setInterval(()=>{
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-}
-},120);
+setInterval(createHeart, 400);
 </script>
 
 </body>
